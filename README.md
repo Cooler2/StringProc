@@ -12,7 +12,7 @@ One command per line. Lines starting with ';' are comments - ignored.
 
 ## Config example with explanation:
 
-```
+``` clojure
 ; Specify source file to process
 input::filename
 
@@ -54,7 +54,7 @@ max::regexp
 
 It's possible to define multiple configs in one file using this syntax:
 
-```
+``` clojure
 ; common config lines
 ...
 
