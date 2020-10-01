@@ -27,7 +27,7 @@ filter::regexp
 exclude::regexp
 
 ; String for the exclude test: if this string contains the extracted value, the source string is ignored.
-excludeIn::51614342;30187786
+excludeIn::string
 
 ; Group strings by value extracted with this regular expression
 groupBy::regexp
