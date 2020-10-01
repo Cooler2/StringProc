@@ -12,6 +12,7 @@ One command per line. Lines starting with ';' are comments - ignored.
 
 ## Config example with explanation:
 
+```
 ; Specify source file to process
 input::filename
 
@@ -47,11 +48,13 @@ avg::regexp
 ; Group functions: get min/max of values extracted with this regular expression (they must be integers)
 min::regexp
 max::regexp
+```
 
 ## Multiple configuration sets in one file.
 
 It's possible to define multiple configs in one file using this syntax:
 
+```
 ; common config lines
 ...
 
@@ -71,3 +74,4 @@ It's possible to define multiple configs in one file using this syntax:
 /// block3
 
 ; These lines are ignored too
+```
