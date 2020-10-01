@@ -244,6 +244,8 @@ procedure TGroupStat.AddValue;
   case func of
    gfCount:inc(accum);
    gfAvg:inc(accum,ParseInt(expr.Match[1]));
+   gfMin:accum:=Min2(accum,ParseInt(expr.Match[1]));
+   gfMax:accum:=Max2(accum,ParseInt(expr.Match[1]));
   end;
  end;
 
@@ -252,6 +254,8 @@ function TGroupStat.GetRes(cnt: integer): string;
   case func of
    gfCount:result:=Format('count: [%d/%d] (%d%%)',[accum,cnt,round(100*accum/cnt)]);
    gfAvg:result:=Format('avg: %.2f',[accum/cnt]);
+   gfMin:result:=Format('min: %d',[accum]);
+   gfMax:result:=Format('max: %d',[accum]);
   end;
  end;
 
